@@ -1,5 +1,6 @@
 #!/bin/sh
 ln -s /usr/bin/php7 /usr/bin/php
+cp -r /home/install/composer.phar /bin/composer
 chmod +x /bin/composer
 composer self-update
 sed -i "s/max_execution_time = 30/max_execution_time = 300/g" /etc/php7/php.ini
