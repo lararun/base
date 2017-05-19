@@ -6,4 +6,4 @@ RUN apk add --update php7 php7-xml php7-pdo php7-openssl php7-zip php7-mbstring 
      sh /home/install/config.sh && \
      rm -rf /home/install && \
      rm -rf /var/cache/apk/*
-CMD "php -v && php -m"
+CMD php -v
