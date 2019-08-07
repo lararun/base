@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine
 COPY files /home/install
 RUN apk add --update php7 php7-xml php7-pdo php7-openssl php7-zip php7-mbstring php7-pcntl php7-posix sqlite  php7-xmlwriter \
             php7-sockets php7-gettext php7-iconv php7-pdo_pgsql php7-pdo_mysql php7-session php7-zlib php7-dom php7-pdo_sqlite php7-fileinfo \
