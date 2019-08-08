@@ -6,8 +6,8 @@ RUN apk add --update php7 php7-xml php7-pdo php7-openssl php7-zip php7-mbstring 
      rm -rf /home/install && \
      rm -rf /var/cache/apk/* && \
      sed -i "s/max_execution_time = 30/max_execution_time = 300/g" /etc/php7/php.ini && \
-     sed -i "s/post_max_size = 8M/post_max_size = 1000M/g" /etc/php7/php.ini && \
-     sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 1000M/g" /etc/php7/php.ini && \
+     sed -i "s/post_max_size = 8M/post_max_size = 10000M/g" /etc/php7/php.ini && \
+     sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 10000M/g" /etc/php7/php.ini && \
      sed -i "s/expose_php = On/expose_php = Off/g" /etc/php7/php.ini && \
      mv composer.phar /bin/composer
 WORKDIR /home
