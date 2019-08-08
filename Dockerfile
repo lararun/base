@@ -7,6 +7,7 @@ RUN apk add --update php7 php7-xml php7-pdo php7-openssl php7-zip php7-mbstring 
      sed -i "s/post_max_size = 8M/post_max_size = 10000M/g" /etc/php7/php.ini && \
      sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 10000M/g" /etc/php7/php.ini && \
      sed -i "s/expose_php = On/expose_php = Off/g" /etc/php7/php.ini && \
+     curl -s https://getcomposer.org/installer | php && \
      mv composer.phar /bin/composer
 WORKDIR /home
 CMD php -v
